@@ -1,0 +1,21 @@
+{
+  "version": 1,
+  "detalles": [
+    {
+      "id": "flor-001",
+      "nombre": "Una flor para ti",
+      "descripcion": "Un pequeño detalle para alegrar tu día.",
+      "imagen": "https://1manuelcuzco.github.io/portafolio/para-ti/flor/portada.png",
+      "url": "https://1manuelcuzco.github.io/portafolio/para-ti/flor/",
+      "publicadoEn": "2026-10-15T09:00:00-05:00",
+      "visible": true,
+      "orden": 1,
+      "notificacion": {
+        "habilitada": true,
+        "id": "flor-001-publicacion",
+        "titulo": "Hay un detalle para ti 🌸",
+        "mensaje": "Una flor para alegrar tu día. Toca para descubrirla."
+      }
+    }
+  ]
+}

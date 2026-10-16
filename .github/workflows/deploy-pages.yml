@@ -4,6 +4,11 @@ on:
   push:
     branches: [main]
   workflow_dispatch:
+    inputs:
+      avisar_para_ti:
+        description: Enviar los anuncios nuevos de Para ti después de publicar
+        type: boolean
+        default: false
 
 permissions:
   contents: read
@@ -12,7 +17,7 @@ permissions:
 
 concurrency:
   group: pages
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   deploy:
@@ -49,3 +54,23 @@ jobs:
       - name: Publicar
         id: deployment
         uses: actions/deploy-pages@v4
+
+  avisar-para-ti:
+    needs: deploy
+    if: github.event_name == 'workflow_dispatch' && inputs.avisar_para_ti && github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    permissions:
+      contents: write
+    steps:
+      - name: Obtener código de esta publicación
+        uses: actions/checkout@v4
+      - name: Preparar Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - name: Verificar publicación y enviar novedades
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+          FIREBASE_SERVICE_ACCOUNT: ${{ secrets.FIREBASE_SERVICE_ACCOUNT }}
+        run: node scripts/enviar-para-ti.mjs

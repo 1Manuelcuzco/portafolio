@@ -9,10 +9,11 @@
       "mensaje": "projects/fisioapp-ae95d/messages/7259278390006678474"
     },
     "flor-003-publicacion": {
-      "estado": "pendiente_revision",
+      "estado": "aceptado_fcm",
       "detalleId": "flor-001",
       "fecha": "2026-10-19T00:33:21.840Z",
-      "run": "39181232897"
+      "run": "39181232897",
+      "mensaje": "projects/fisioapp-ae95d/messages/-8693889892865346571"
     }
   }
 }

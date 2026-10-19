@@ -2,10 +2,11 @@
   "version": 1,
   "anuncios": {
     "flor-002-publicacion": {
-      "estado": "pendiente_revision",
+      "estado": "aceptado_fcm",
       "detalleId": "flor-001",
       "fecha": "2026-10-19T00:24:20.855Z",
-      "run": "39180555911"
+      "run": "39180555911",
+      "mensaje": "projects/fisioapp-ae95d/messages/7259278390006678474"
     }
   }
 }

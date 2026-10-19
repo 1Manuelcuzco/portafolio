@@ -14,6 +14,12 @@
       "fecha": "2026-10-19T00:33:21.840Z",
       "run": "39181232897",
       "mensaje": "projects/fisioapp-ae95d/messages/-8693889892865346571"
+    },
+    "flor-004-publicacion": {
+      "estado": "pendiente_revision",
+      "detalleId": "flor-001",
+      "fecha": "2026-10-19T01:42:18.522Z",
+      "run": "39186490540"
     }
   }
 }
